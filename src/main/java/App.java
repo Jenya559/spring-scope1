@@ -10,9 +10,8 @@ public class App {
         System.out.println("Переменные ссылаются на один и тот же объект?" + (tree == leaf));
         System.out.println(tree);
         System.out.println(leaf);
-        ApplicationContext applicationContext1 = new AnnotationConfigApplicationContext(AppConfig.class);
-        Cat one = (Cat) applicationContext1.getBean("cat");
-        Cat two = (Cat) applicationContext1.getBean("cat");
+        Cat one = (Cat) applicationContext.getBean("cat");
+        Cat two = (Cat) applicationContext.getBean("cat");
         System.out.println("Переменные ссылаются на один и тот же объект?" + (one == two));
         System.out.println(one);
         System.out.println(two);
